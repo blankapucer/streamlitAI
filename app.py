@@ -241,7 +241,7 @@ with st.spinner("Searching my nutrition database..."):
         }
         </style>
         """,
-        unsafe_allow_html=True
+        unsafe_allow_html=True)
 
 # TO RUN: Save as app.py, then type: streamlit run app.py
 
