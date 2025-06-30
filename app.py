@@ -228,7 +228,20 @@ with st.spinner("Searching my nutrition database..."):
     # Custom success/error messages
     st.success("🥦 Found the perfect answer for you!")
     st.info("🥑Tip: Try asking about specific nutrition topics!")
-
+    
+ # Add a pastel background using custom CSS
+    st.markdown(
+        """
+        <style>
+        body {
+            background: linear-gradient(135deg, #f8fafc 0%, #e0f7fa 40%, #ffe0f0 100%);
+        }
+        .stApp {
+            background: linear-gradient(135deg, #f8fafc 0%, #e0f7fa 40%, #ffe0f0 100%);
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
 
 # TO RUN: Save as app.py, then type: streamlit run app.py
 
