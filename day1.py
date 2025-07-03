@@ -5,6 +5,16 @@ try:
     sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 except ImportError:
     pass
+
+# FIX: Reset collection when problems occur
+def reset_database():
+    client = chromadb.Client()
+    try:
+        client.delete_collection("docs")
+    except:
+        pass
+    return client.create_collection("docs")
+
 import streamlit as st
 import chromadb
 from transformers import pipeline
